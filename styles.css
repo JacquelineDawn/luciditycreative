@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70%;
+}
+
+:root {
+    --gradient: linear-gradient(43deg, rgb(240, 140, 213), whitesmoke, rgb(106, 200, 231));
+}
+
+#orb {
+    background-size: 400%;
+    background-image: var(--gradient);
+    animation: bg-animation 20s infinite;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px 0 #dddddd, inset 0 -8px 10px 0 whitesmoke;
+    transition: 4s;
+}
+
+#orb:hover {
+    width: 600px;
+    height: 600px;
+    animation: bg-animation 10s infinite;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left
+    }
+    50% {
+        background-position: right
+    }
+    100% {
+        background-position: left
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #orb {
+        background-size: 400%;
+        background-image: var(--gradient);
+        animation: bg-animation 10s infinite;
+        width: 325px;
+        height: 325px;
+        border-radius: 50%;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 15px 0 #dddddd, inset 0 -8px 10px 0 whitesmoke;
+    }
+    #orb:hover {
+        width: 375px;
+        height: 375px;
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 60vh;
+    }
+}
