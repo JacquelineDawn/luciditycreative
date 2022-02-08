@@ -31,13 +31,13 @@ body {
 }
 
 :root {
-    --gradient: linear-gradient(43deg, rgb(240, 140, 213), whitesmoke, rgb(106, 200, 231));
+    --gradient: linear-gradient(43deg, lightpink, whitesmoke, lightblue);
 }
 
 #orb {
     background-size: 400%;
     background-image: var(--gradient);
-    animation: bg-animation 20s infinite;
+    animation: bg-animation 25s infinite;
     width: 550px;
     height: 550px;
     border-radius: 50%;
@@ -47,9 +47,9 @@ body {
 }
 
 #orb:hover {
-    width: 600px;
-    height: 600px;
-    animation: bg-animation 10s infinite;
+    width: 575px;
+    height: 575px;
+    animation: bg-animation 15s infinite;
 }
 
 @keyframes bg-animation {
